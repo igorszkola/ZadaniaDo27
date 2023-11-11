@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanie()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanie" cols="80" rows="20" readonly> Zadanie 27
+<html>
+<head>
+<title>
+</title>
+<script language="JavaScript">
+function Alfa(x,s)
+{
+x_liczba=parseFloat(x)
+s_liczba=parseFloat(s)
+Alfa_wynik = x_liczba/s_liczba;
+document.getElementsByName('alfa')[0].value=Alfa_wynik.toFixed(2); /* na dokument */
+}
+function O(x,s)
+{
+x_liczba=parseFloat(x)
+s_liczba=parseFloat(s)
+h = Math.pow(s_liczba,2)-Math.pow(x_liczba,2);
+wysokosc_wynik = Math.sqrt(h);
+document.getElementsByName('wys')[0].value=wysokosc_wynik.toFixed(2);;
+}
+</script>
+</head>
+<body>
+
+<br> <br>
+<form name="formularz" action="..." onsubmit="Alfa(this.odleglosc.value,this.droga.value); O(this.odleglosc.value,this.droga.value);return false">
+Podaj odleglosc =
+<input size="6" name="odleglosc">
+Podaj droge =
+<input size="6" name="droga">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Wysokosc =
+<input size="6" name="wys">
+Alfa =
+<input size="6" name="alfa">
+</form>
+</body>
+</html>
+
+
+
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanie()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

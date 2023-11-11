@@ -1,0 +1,50 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanie()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanie" cols="80" rows="20" readonly> Zadanie 25
+<html>
+<head>
+<title>
+ Euler
+</title>
+<body>
+<div style="color: blue;">
+<script>
+  var n=parseFloat(prompt("N0=","Sztuk"));
+  var t=parseFloat(prompt("T=","Lat"));
+  var T1T2=parseFloat(prompt("T1/2=","Lat"));
+  function Lambda(T1T2)
+ {
+  return (Math.log(2))/T1T2;
+ }
+ function euler(t,n)
+ {
+	potega = t*-Lambda(T1T2);
+	e = Math.pow(Math.E,potega);
+  return n * e;
+ }
+document.write("N0 = "+n+"[sztuk]<br>")
+document.write("t = "+t+"[lat]<br>")
+document.write("T1/T2 = "+T1T2+"[lat]<br>");
+document.write("Lambda = "+Lambda(T1T2).toFixed(7)+"[1/rok]<br>");
+document.write("N = "+euler(t,n).toFixed(7)+"[sztuk]");
+</script>
+
+</div>
+
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanie()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

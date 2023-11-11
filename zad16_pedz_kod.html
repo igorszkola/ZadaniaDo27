@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanie()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanie" cols="80" rows="20" readonly> Zadanie 16
+<html>
+<head>
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+var a_ped=prompt("Podaj pierwszą liczbę = ","");
+var b_ped=prompt("Podaj drugą liczbę = ","");
+var a=parseFloat(a_ped);
+var b=parseFloat(b_ped);
+var wzor1,wzor2,wzor3,wzor4,wynik;
+wzor1 = (a*a*a)
+wzor2 = 3*(a*a*b)
+wzor3 = 3*(a*b*b)
+wzor4 = (b*b*b)
+wynik = wzor1+wzor2+wzor3+wzor4
+document.write("("+a+" + "+b+")^3 = "+a+"^3 + 3*(("+a+")^2)*("+b+") + 3*("+a+")*(("+b+")^"+b+") + "+b+"^3 = "+wzor1+" + "+wzor2+" + "+wzor3+" + "+wzor4+" = "+wynik);
+</script>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanie()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanie()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanie" cols="80" rows="20" readonly> Zadanie 24
+<html>
+<head>
+<title>
+ Obliczanie wartosci
+</title>
+<body>
+<div style="background-color: gray;">
+<script>
+  var x1=parseFloat(prompt("x1=",""));
+  var x2=parseFloat(prompt("x2=",""));
+  function x1radiant(x1)
+ {
+  return (x1*Math.PI)/180;
+ }
+function y(x1) {
+return 3*Math.pow(x1,5/7);
+}
+function y1(x1)
+{
+ cosi = 2*Math.cos(x1radiant(x1));
+ sinu = 3*Math.sin(x1radiant(x1));
+ return cosi + sinu;
+}
+function y2(x1,x2)
+{
+ w1 = Math.pow(x1,5);
+ w2 = Math.pow(x2,4);
+ w3 = Math.abs(x1-x2);
+ wzor = w1 + 2*w2;
+ pierwiastek = Math.pow(wzor,1/3)
+ return pierwiastek * w3;
+}
+document.write("x1 = "+x1+"&nbsp&nbsp&nbsp&nbsp x2 = "+x2+"<br>");
+document.write("x1 = "+x1+"&nbsp&nbsp&nbsp&nbsp x2 = "+x1radiant(x1).toFixed(2)+"<br>")
+document.write("y1 = "+y(x1).toFixed(2)+"<br>");
+document.write("y2 = "+y1(x1).toFixed(2)+"<br>");
+document.write("y3 = "+y2(x1,x2).toFixed(2));
+</script>
+
+</div>
+
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanie()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

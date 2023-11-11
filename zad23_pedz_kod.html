@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanie()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanie" cols="80" rows="20" readonly> Zadanie 23
+<html>
+<head>
+<title>
+Obliczanie dlugości drabiny oraz jej kąta alfa
+</title>
+<script language="JavaScript">
+function Drabina(d,x)
+{
+d_liczba=parseFloat(d)
+x_liczba=parseFloat(x)
+V_wynik=d_liczba*d_liczba+x_liczba*x_liczba;
+wynik = Math.sqrt(V_wynik);
+document.getElementsByName('dlugosc')[0].value=wynik.toFixed(2); /* na dokument */
+
+}
+function Kat(d,x)
+{
+d_liczba=parseFloat(d)
+x_liczba=parseFloat(x)
+tg_alfa=d_liczba/x_liczba;
+radianty= Math.atan(tg_alfa);
+stopnie = (radianty * 180)/Math.PI;
+document.getElementsByName('alfa')[0].value=stopnie.toFixed(2);
+
+}
+</script>
+</head>
+<body>
+Obliczanie długości drabiny i kąta alfa
+<br> <br>
+<form name="formularz" action="..." onsubmit="Drabina(this.wysokosc.value,this.odleglosc.value); Kat(this.wysokosc.value,this.odleglosc.value);return false">
+Podaj d =
+<input size="6" name="wysokosc">
+Podaj x =
+<input size="6" name="odleglosc">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Drabina =
+<input size="6" name="dlugosc">
+Alfa =
+<input size="6" name="alfa">
+</form>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanie()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

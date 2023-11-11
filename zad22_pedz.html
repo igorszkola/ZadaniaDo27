@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>
+Przykład obliczenia Pola i obwodu prostokąta
+</title>
+<script language="JavaScript">
+function V(r,h)
+{
+a=parseFloat(r)
+b=parseFloat(h)
+Pole =a * b
+document.getElementsByName('pole')[0].value=Pole.toFixed(2); /* na dokument */
+alert("Pole = "+Pole.toFixed(2)+" cm^2");
+pokaz1.innerHTML="pole ="+Pole.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function Pc(r,h)
+{
+a=parseFloat(r)
+b=parseFloat(h)
+Obwod=2 * a + 2*b
+document.getElementsByName('obwod')[0].value=Obwod.toFixed(2);
+alert("obwod = "+Obwod.toFixed(2)+" cm");
+pokaz2.innerHTML="obwod = "+Obwod.toFixed(2)+"cm";
+}
+</script>
+</head>
+<body>
+Obliczanie pola i obwodu prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="V(this.a.value,this.b.value); Pc(this.a.value,this.b.value);return false">
+Podaj a =
+<input size="6" name="a">
+Podaj b =
+<input size="6" name="b">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+Pole = 
+<input size="6" name="pole">
+Obwod =
+<input size="6" name="obwod">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

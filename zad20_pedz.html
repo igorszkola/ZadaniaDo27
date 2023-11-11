@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<script language="JavaScript">
+
+function AB_pedz()
+{
+	var xa= parseFloat(document.getElementById('wspxA').value);
+	var ya= parseFloat(document.getElementById('wspyA').value);
+	var xb= parseFloat(document.getElementById('wspxB').value);
+	var yb= parseFloat(document.getElementById('wspyB').value);
+	var wynik = Math.sqrt((xa-xb)**2+(ya-yb)**2);
+	document.getElementById("nazwa").innerHTML ="Odleglosc  = "+wynik.toFixed(2)+" cm";
+}
+function BC_pedz()
+{
+	var xb= parseFloat(document.getElementById('wspxB').value);
+	var yb= parseFloat(document.getElementById('wspyB').value);
+	var xc= parseFloat(document.getElementById('wspxC').value);
+	var yc= parseFloat(document.getElementById('wspyC').value);
+	var wynik = Math.sqrt((xb-xc)**2+(yb-yc)**2);
+	document.getElementById("nazwa").innerHTML ="Odleglosc  = "+wynik.toFixed(2)+" cm";
+}
+function AC_pedz()
+{
+	var xa= parseFloat(document.getElementById('wspxA').value);
+	var ya= parseFloat(document.getElementById('wspyA').value);
+	var xc= parseFloat(document.getElementById('wspxC').value);
+	var yc= parseFloat(document.getElementById('wspyC').value);
+	var wynik = Math.sqrt((xa-xc)**2+(ya-yc)**2);
+	document.getElementById("nazwa").innerHTML ="Odleglosc  = "+wynik.toFixed(2)+" cm";
+}
+</script>
+Podaj współrzędna 'x' punktu A <input type="text" id="wspxA" value="podaj długość"> <br>
+Podaj współrzędna 'y' punktu A <input type="text" id="wspyA" value="podaj długość"> <br>
+Podaj współrzędna 'x' punktu B <input type="text" id="wspxB" value="podaj długość"> <br>
+Podaj współrzędna 'y' punktu B <input type="text" id="wspyB" value="podaj długość"> <br>
+Podaj współrzędna 'x' punktu C <input type="text" id="wspxC" value="podaj długość"> <br>
+Podaj współrzędna 'y' punktu C <input type="text" id="wspyC" value="podaj długość"> <br>
+<input type="button" name="bokA" value="Oblicz odleglosc miedzy A i B" Onclick="AB_pedz()"> <br>
+<input type="button" name="bokB" value="Oblicz odleglosc miedzy B i C" Onclick="BC_pedz()"> <br>
+<input type="button" name="bokC" value="Oblicz odleglosc miedzy A i C" Onclick="AC_pedz()">
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
